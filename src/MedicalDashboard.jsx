@@ -1524,10 +1524,13 @@ const processFile = async (file) => {
     const formData = new FormData();
     formData.append("csv_file", file);
 
-    const response = await fetch("https://ecommerce-analytics-dashboard-production-506f.up.railway.app/", {
-      method: "POST",
-      body: formData,
-    });
+   const response = await fetch(
+  "https://ecommerce-analytics-dashboard-production-506f.up.railway.app/",
+  {
+    method: "POST",
+    body: formData,
+  }
+);
 
     if (!response.ok) {
       throw new Error("Upload failed");
